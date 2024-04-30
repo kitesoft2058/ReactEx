@@ -1,0 +1,45 @@
+/* 아이템뷰 박스 모양 스타일 */
+.item{
+    border: 1px solid gray;
+    padding: 16px;
+    margin: 4px;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* no, name 이 표시되는 첫번째 줄에 대한 스타일 */
+.line1{
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+/* module.css 를 import 하였기에 모든 자식/자손/의사 선택자도 적용가능함 */
+
+/* 아이템뷰 첫줄의 no, name을 보여주는 span요소의 글씨속성 스타일 */
+.line1 span{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* no를 보여주는 span요소의 오른쪽 마진 적용 */
+.line1 span:nth-child(1){
+    margin-right: 2rem;
+}
+
+/* name을 보여주는 span요소의 글씨 색상 지정 */
+.line1 span:nth-child(2){
+    color: green;
+}
+
+/* message를 보여주는 두번째 줄의 위쪽 마진과 글씨 색상 지정 */
+.line2{
+    margin-top: 8px;
+    color: darkolivegreen;
+}
+
+/* 아이템뷰에 마우스를 올리거나 눌렀을 때 음영처리..[모바일에서는 hover가 없기에 터치여부를 인식하기위해 :active 의사 선택자가 반드시 지정되어야 함 */
+.item:hover, .item:active{
+    background-color: lightgray;
+}
